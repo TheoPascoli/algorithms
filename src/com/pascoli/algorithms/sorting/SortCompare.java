@@ -9,6 +9,7 @@ public class SortCompare {
         Instant start = Instant.now();
         if (alg.equals("Insertion")) Insertion.sort(a);
         if (alg.equals("Selection")) Selection.sort(a);
+        if (alg.equals("Shell")) Shell.sort(a);
         Instant end = Instant.now();
         return Duration.between(start, end).toMillis();
     }
