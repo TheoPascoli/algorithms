@@ -16,8 +16,8 @@ public class SortCompare {
     public static double timeRandomInput(String alg, int N, int T) {
         double total = 0.0;
         Double[] a = new Double[N];
-        for(int i = 0; i < T; i++) {
-            a[i] = StdRandom.uniform();
+        for(int i = 0; i < N; i++) {
+            a[i] = Math.random() * T;
         }
         total += time(alg, a);
         return total;
@@ -31,6 +31,6 @@ public class SortCompare {
         double t1 = timeRandomInput(alg1, N, T);
         double t2 = timeRandomInput(alg2, N, T);
         System.out.println(String.format("For %d random Doubles\n %s is", N, alg1));
-        System.out.println(String.format(" %1.f times faster than %s", t2/t1, alg2));
+        System.out.println(String.format(" %f times faster than %s", t2/t1, alg2));
     }
 }
