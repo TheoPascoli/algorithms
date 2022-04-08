@@ -13,8 +13,8 @@ public class Shell {
                 for (int j = i; j >= h && less(a[j], a[j-h]); j -= h) {
                     exch(a, j, j-h);
                 }
-                h = h/3;
             }
+            h = h/3;
         }
     }
 
