@@ -3,6 +3,7 @@ package com.pascoli.algorithms.sorting;
 import java.time.Duration;
 import java.time.Instant;
 
+@SuppressWarnings("rawtypes")
 public class SortCompare {
 
     public static double time(String alg, Double[] a) {
@@ -10,6 +11,7 @@ public class SortCompare {
         if (alg.equals("Insertion")) Insertion.sort(a);
         if (alg.equals("Selection")) Selection.sort(a);
         if (alg.equals("Shell")) Shell.sort(a);
+        if (alg.equals("Merge")) Merge.sort(a);
         Instant end = Instant.now();
         return Duration.between(start, end).toMillis();
     }
