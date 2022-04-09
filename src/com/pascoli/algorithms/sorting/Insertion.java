@@ -2,6 +2,7 @@ package com.pascoli.algorithms.sorting;
 
 import java.util.Scanner;
 
+@SuppressWarnings("rawtypes")
 public class Insertion {
 
     public static void sort(Comparable[] a) {
